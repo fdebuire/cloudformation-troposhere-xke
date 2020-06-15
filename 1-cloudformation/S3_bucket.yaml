@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create S3 Bucket
+Outputs:
+  BucketName:
+    Description: Name of S3 bucket
+    Value: !Ref 'TestBucket'
+Resources:
+  TestBucket:
+    Properties:
+      AccessControl: PublicRead
+      BucketName: xke-test-bucket
+    Type: AWS::S3::Bucket
